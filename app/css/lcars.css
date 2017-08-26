@@ -91,8 +91,7 @@ a img {
 }
 html,
 body {
-  font-size: 14px;
-  font-family: sans-serif;
+  font-size: 30px;
   color: #fff;
 }
 *,
@@ -108,7 +107,6 @@ a:visited,
 a:hover {
   color: #000;
   text-decoration: none;
-  font-weight: bold;
 }
 .lcars-orange-bg {
   background-color: #f90 !important;
@@ -176,29 +174,37 @@ a:hover {
 .left {
   float: left;
 }
+@font-face {
+  font-family: 'lcars';
+  src: url("../font/HelveticaLTStd-UltraComp.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: 'lcars';
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 h1 {
   font-size: 270%;
-  font-weight: bold;
 }
 h2 {
   font-size: 240%;
-  font-weight: bold;
 }
 h3 {
   font-size: 200%;
-  font-weight: bold;
 }
 h4 {
   font-size: 180%;
-  font-weight: bold;
 }
 h5 {
   font-size: 160%;
-  font-weight: bold;
 }
 h6 {
   font-size: 140%;
-  font-weight: bold;
 }
 .lcars-container {
   background: #000;
@@ -217,9 +223,9 @@ ul.lcars-menu.left {
   margin-right: 1.5em;
   margin-left: 0;
 }
-.lcars-menu.right,
-ol.lcars-menu.right,
-ul.lcars-menu.right {
+.lcars-menu.menu-right,
+ol.lcars-menu.menu-right,
+ul.lcars-menu.menu-right {
   margin-left: 1.5em;
   margin-right: 0;
 }
@@ -922,18 +928,15 @@ ul.lcars-menu li a {
   background: #000;
 }
 .lcars-elbow.left.bottom {
-  -webkit-border-top-left-radius: 60px;
   border-top-left-radius: 60px;
 }
 .lcars-elbow.left.bottom:after {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-border-top-left-radius: 60px;
   border-top-left-radius: 60px;
 }
 .lcars-elbow.left.top {
-  -webkit-border-bottom-left-radius: 60px;
   border-bottom-left-radius: 60px;
 }
 .lcars-elbow.left.top a {
@@ -945,18 +948,15 @@ ul.lcars-menu li a {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-border-bottom-left-radius: 60px;
   border-bottom-left-radius: 60px;
 }
 .lcars-elbow.right.bottom {
-  -webkit-border-top-right-radius: 60px;
   border-top-right-radius: 60px;
 }
 .lcars-elbow.right.bottom:after {
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-border-top-right-radius: 60px;
   border-top-right-radius: 60px;
 }
 .lcars-elbow.right.bottom a {
@@ -966,7 +966,6 @@ ul.lcars-menu li a {
   padding: 5px;
 }
 .lcars-elbow.right.top {
-  -webkit-border-bottom-right-radius: 60px;
   border-bottom-right-radius: 60px;
 }
 .lcars-elbow.right.top a {
@@ -979,7 +978,6 @@ ul.lcars-menu li a {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-border-bottom-right-radius: 60px;
   border-bottom-right-radius: 60px;
 }
 .lcars-row {
@@ -1712,8 +1710,7 @@ a.lcars-button {
   display: inline-block;
   vertical-align: middle;
   padding: 10px 15px;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 30px;
   color: #000;
   text-decoration: none;
   text-align: center;
@@ -1731,51 +1728,48 @@ a.lcars-button .lcars-button-addition {
   vertical-align: middle;
   background: #000;
   color: #fff;
-  font-size: 28px;
+  font-size: 60px;
   padding: 5px 3px;
-  margin: -19px 0;
+  margin: -11px 0;
 }
 .lcars-button.bottom {
-  -webkit-border-bottom-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  -webkit-border-bottom-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 .lcars-button.top {
-  -webkit-border-top-left-radius: 20px;
   border-top-left-radius: 20px;
-  -webkit-border-top-right-radius: 20px;
   border-top-right-radius: 20px;
 }
 .lcars-button.left {
-  -webkit-border-top-left-radius: 20px;
   border-top-left-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 .lcars-button.right {
-  -webkit-border-top-right-radius: 20px;
   border-top-right-radius: 20px;
-  -webkit-border-bottom-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 .lcars-button.tl {
-  -webkit-border-top-left-radius: 20px;
   border-top-left-radius: 20px;
 }
 .lcars-button.tr {
-  -webkit-border-top-right-radius: 20px;
   border-top-right-radius: 20px;
 }
 .lcars-button.bl {
-  -webkit-border-bottom-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 .lcars-button.br {
-  -webkit-border-bottom-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 .lcars-button.radius {
-  -webkit-border-radius: 20px;
   border-radius: 20px;
+}
+.federation-logo {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

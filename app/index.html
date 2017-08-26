@@ -6,7 +6,58 @@
   <link rel="stylesheet" href="css/lcars.css">
   <style>
   html, body { background: black }
+      
+      #console {
+          padding:11px 0;
+      }
+      #console p {
+          font-family: monospace;
+          font-weight: bold;
+          font-size: 8px;
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+          color: limegreen;
+          x-text-shadow: 0px 0px 10px limegreen;
+      }
+
+      
+.msg {
+  font-family: monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 5vh;
+  padding-top: 5vh;
+  background: red;
+  box-shadow: 0 0 30px red;
+  text-shadow: 0 0 20px white;
+  color: white;
+  width: 20vw;
+  height: 15vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -10vw;
+  top: 50%;
+  margin-top: -5vh;
+  text-align: center;
+  min-width: 200px;
+  animation-name: blink;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
   </style>
+    
 </head>
 <body>
 
@@ -19,7 +70,7 @@
       <!-- TOP LEFT ELBOW
       =========================================================== -->
       <div class="lcars-column u-1-8 lcars-elbow left bottom lcars-blue-bg">
-        <a href="#">Side Button 1</a>
+        <a href="#"></a>
       </div>
 
       <!-- TOP DIVIDER AND BUTTONS
@@ -27,8 +78,8 @@
       <div class="lcars-column u-6-8 lcars-divider lcars-blue-tan-divide">
         <div class="lcars-row">
           <div class="lcars-column u-1-2">
-            <a href="#" class="lcars-button radius">
-              Button 1
+            <a href="javascript:history.go(0)" class="lcars-button radius">
+              PURGE SCREEN HISTORY
               <span class="lcars-button-addition">B4</span>
             </a>
           </div>
@@ -41,7 +92,7 @@
       <!-- TOP RIGHT ELBOW
       =========================================================== -->
       <div class="lcars-column u-1-8 lcars-elbow right bottom lcars-tan-bg">
-        <a href="#">Side Button 2</a>
+        <a href="#"></a>
       </div>
     </div>
 
@@ -51,11 +102,11 @@
       =========================================================== -->
       <div class="lcars-column u-1-8">
         <ul class="lcars-menu">
-          <li class="lcars-blue-bg"><a href="#">Testing</a></li>
-          <li class="lcars-blue-bg tall large-gap">Testing Large</li>
-          <li class="lcars-tan-bg">Testing 2</li>
-          <li class="lcars-tan-bg tall">Testing Large 2</li>
-          <li class="lcars-tan-bg">Testing 3</li>
+          <li class="lcars-blue-bg"><a href="#"></a></li>
+          <li class="lcars-blue-bg tall large-gap"></li>
+          <li class="lcars-tan-bg"></li>
+          <li class="lcars-tan-bg tall"></li>
+          <li class="lcars-tan-bg"></li>
         </ul>
       </div>
 
@@ -64,10 +115,14 @@
       <div class="lcars-column u-6-8">
         <div class="lcars-row">
           <div class="lcars-column u-1-2">
-            <a href="#" class="lcars-button radius">Button 1</a>
+            <a href="#" class="lcars-button radius" id="js-scan">SCAN FOR NEW CONTENT</a>
+            <!-- <div class="msg" id="js-msg">Scanning</div> -->
+            <div id="console">
+            </div>
           </div>
           <div class="lcars-column u-1-2">
-            <a href="#" class="lcars-button radius">Button 2</a>
+              <img src="img/federation-logo.svg" class="federation-logo"/>
+            <!-- <a href="#" class="lcars-button radius"></a> -->
           </div>
         </div>
       </div>
@@ -76,11 +131,11 @@
       =========================================================== -->
       <div class="lcars-column u-1-8">
         <ul class="lcars-menu menu-right">
-          <li class="lcars-tan-bg"><a href="#">Testing</a></li>
-          <li class="lcars-tan-bg tall large-gap">Testing Large</li>
-          <li class="lcars-blue-bg">Testing 2</li>
-          <li class="lcars-blue-bg tall">Testing Large 2</li>
-          <li class="lcars-blue-bg">Testing 3</li>
+          <li class="lcars-tan-bg"><a href="#"></a></li>
+          <li class="lcars-tan-bg tall large-gap"></li>
+          <li class="lcars-blue-bg"></li>
+          <li class="lcars-blue-bg tall"></li>
+          <li class="lcars-blue-bg"></li>
         </ul>
       </div>
     </div>
@@ -92,7 +147,7 @@
       <!-- BOTTOM LEFT ELBOW
       =========================================================== -->
       <div class="lcars-column u-1-8 lcars-elbow left top lcars-tan-bg">
-        <a href="#">Side Button 3</a>
+        <a href="#"></a>
       </div>
 
       <!-- BOTTOM DIVIDER AND BUTTONS
@@ -100,10 +155,10 @@
       <div class="lcars-column u-6-8 lcars-divider bottom lcars-tan-blue-divide">
         <div class="lcars-row">
           <div class="lcars-column u-1-2">
-            <a href="#" class="lcars-button radius">Button 1</a>
+            <a href="#" class="lcars-button radius">SYSTEMS</a>
           </div>
           <div class="lcars-column u-1-2">
-            <a href="#" class="lcars-button radius">Button 2</a>
+            <a href="#" class="lcars-button radius">LIFE SUPPORT</a>
           </div>
         </div>
       </div>
@@ -111,11 +166,11 @@
       <!-- BOTTOM RIGHT ELBOW
       =========================================================== -->
       <div class="lcars-column u-1-8 lcars-elbow right top lcars-blue-bg">
-        <a href="#">Side Button 4</a>
+        <!-- <a href="#"></a> -->
       </div>
     </div>
 
   </div>
-
+<script src="js/console.js"></script>
 </body>
 </html>
